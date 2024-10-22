@@ -17,6 +17,8 @@ class Validator
     }
     public function validate($formData, array $fields)
     {
+        $errors = [];
+
         foreach ($fields as $fieldName => $rules) {
             foreach ($rules as $rule) {
                 $ruleParams = [];
